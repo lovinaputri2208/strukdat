@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1728730613 source:c:\users\hp\documents\semester 3\struktur data\double linked list\main.c
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+
