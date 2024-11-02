@@ -185,7 +185,16 @@ void tambahMahasiswa(node **headL, node **headP) {
     scanf("%s", nama);
     printf("Input jenis kelamin (L/P): ");
     scanf(" %c", &jenis_kelamin);
-
+     if (posisi == 1) {
+            tambahAwal(headL, nama1, 'L');
+            tambahAwal(headP, nama2, 'P');
+        } else if (posisi == 2) {
+            tambahTengah(headL, nama1, 'L');
+            tambahTengah(headP, nama2, 'P');
+        } else {
+            tambahAkhir(headL, nama1, 'L');
+            tambahAkhir(headP, nama2, 'P');
+        }
     if (jenis_kelamin == 'L') {
         if (countStudents(*headL) < MAX_STUDENTS) {
             tambahAkhir(headL, nama, jenis_kelamin);
@@ -258,7 +267,16 @@ void cindyRule(node **headP) {
 
 void tambahKembar(node **headL, node **headP, char *nama1, char *nama2) {
     if (countStudents(*headL) < MAX_STUDENTS) {
-        tambahAkhir(headL, nama1, 'L');
+         if (posisi == 1) {
+            tambahAwal(headL, nama1, 'L');
+            tambahAwal(headL, nama2, 'L');
+        } else if (posisi == 2) {
+            tambahTengah(headL, nama1, 'L');
+            tambahTengah(headL, nama2, 'L');
+        } else {
+            tambahAkhir(headL, nama1, 'L');
+            tambahAkhir(headL, nama2, 'L');
+        }
     } else {
         printf("Batas maksimum mahasiswa laki-laki sudah tercapai.\n");
         return;
