@@ -72,7 +72,9 @@ int main() {
         printf("3. Lihat data teratas (Top)\n");
         printf("4. Hitung jumlah data (Count)\n");
         printf("5. Hancurkan stack (Destroy)\n");
-        printf("6. Keluar\n");
+        printf("6. Cek Stack Penuh (Full Stack)\n");
+        printf("7. Cek Stack Kosong (Empty Stack)\n");
+        printf("8. Keluar\n");
         printf("Masukkan operasi yang diinginkan: ");
         scanf("%d", &pilihan);
 
@@ -105,13 +107,29 @@ int main() {
                 break;
 
             case 6:
+                if (isFull(&s)) {
+                    printf("Stack penuh\n");
+                } else {
+                    printf("Stack belum penuh\n");
+                }
+                break;
+
+            case 7:
+                if (isEmpty(&s)) {
+                    printf("Stack kosong\n");
+                } else {
+                    printf("Stack tidak kosong\n");
+                }
+                break;
+
+            case 8:
                 printf("Keluar dari program\n");
                 break;
 
             default:
                 printf("Pilihan tidak valid, silahkan coba lagi\n");
         }
-    } while (pilihan != 6);
+    } while (pilihan != 8);
     system("cls");
     return 0;
 }
