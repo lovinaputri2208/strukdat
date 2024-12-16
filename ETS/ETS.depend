@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1729493871 source:c:\users\hp\documents\semester 3\struktur data\ets\main.c
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<string.h>
+
